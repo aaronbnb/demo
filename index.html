@@ -2,6 +2,7 @@
 <html lang="en" dir="ltr">
 
 <head>
+  <script src="https://www.google.com/recaptcha/api.js?render=reCAPTCHA_site_key"></script>
   <meta charset="utf-8">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
   <link href="https://fonts.googleapis.com/css?family=Lato|Cabin|Monserrat|Forum|Didact+Gothic|Raleway" rel="stylesheet">
@@ -36,6 +37,95 @@
       </ul>
     </div>
   </nav>
+
+<div class="row">
+  <div class="col-md-2">
+    <h2>A11y</h2>
+  </div>
+  <div class="col-md-8">
+    <div class="card">
+      <p>Here</p>
+    </div>
+    <div class="card">
+      <p>There</p>
+    </div>
+    <div class="card">
+      <p>Everywhere</p>
+    </div>
+  </div>
+</div>
+
+<html><head>
+<meta charset="UTF-8">
+<title>Using role=alert to Identify Errors</title>
+<script src="http://code.jquery.com/jquery.js"></script>
+<script>
+$(document).ready(function(e) {
+	$('#signup').submit(function() {
+		$('#errors').html('');
+		if ($('#first').val() === '') {
+			$('#errors').append('<p>Please enter your first name.</p>');
+		}
+		if ($('#last').val() === '') {
+			$('#errors').append('<p>Please enter your last name.</p>');
+		}
+		if ($('#email').val() === '') {
+			$('#errors').append('<p>Please enter your email address.</p>');
+		}
+		return false;
+	});
+	$('#signup2').submit(function() {
+		$('#errors2').html('');
+		if ($('#first2').val() === '') {
+			$('#errors2').append('<p>Please enter your first name.</p>');
+		}
+		if ($('#last2').val() === '') {
+			$('#errors2').append('<p>Please enter your last name.</p>');
+		}
+		if ($('#email2').val() === '') {
+			$('#errors2').append('<p>Please enter your email address.</p>');
+		}
+		return false;
+	});
+	$('#signup3').submit(function() {
+		$('#errors3').html('');
+		if ($('#first3').val() === '') {
+			$('#errors3').append('<p>Please enter your first name.</p>');
+		}
+		if ($('#last3').val() === '') {
+			$('#errors3').append('<p>Please enter your last name.</p>');
+		}
+		if ($('#email3').val() === '') {
+			$('#errors3').append('<p>Please enter your email address.</p>');
+		}
+		return false;
+	});
+});
+</script>
+</head>
+
+<body class="vsc-initialized">
+<h1>Using ARIA Live Regions or role=alert to Identify Errors</h1>
+<form name="signup" id="signup" >
+  <p id="errors" role="alert" aria-live="assertive">
+    <label for="first">First Name (required)</label><br>
+    <input type="text" name="first" id="first">
+  </p>
+  <p>
+    <label for="last">Last Name (required)</label><br>
+    <input type="text" name="last" id="last">
+  </p>
+  <p>
+    <label for="email">Email (required)</label><br>
+    <input type="text" name="email" id="email">
+  </p>
+  <p>
+    <input type="submit" name="button" id="button" value="Submit">
+  </p>
+</form>
+
+
+</body></html>
 
   <!-- <div class="a">
     <button class="fade1">View Story</button>
