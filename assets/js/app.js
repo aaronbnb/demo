@@ -25,7 +25,9 @@ $(document).ready(function() {
     $('button.hamburger').removeClass('is-active')
     $('button.hamburger').attr('state', 'closed')
     closeNav();
-  })
+  });
+
+
 $('[data-toggle="tooltip"]').tooltip()
 
   $('form#signup').on('submit', function() {
@@ -47,6 +49,7 @@ $('[data-toggle="tooltip"]').tooltip()
     }
 
   });
+
   $('button.hamburger').on('click', function(){
     console.log("here");
     if($(this).attr('state') == 'open') {
@@ -78,20 +81,12 @@ $('[data-toggle="tooltip"]').tooltip()
   $("a.nav-link").on('click', function(event) {
     console.log(event);
     let href = $(this).attr('href');
-    var linkScrollPosition = $(document).scrollTop();
-    console.log(linkScrollPosition);
     $([document.documentElement, document.body]).animate({
       scrollTop: $(href).offset().top - 30
     }, 1500);
     let target = href;
     console.log(target);
-      $(target)[0].focus(function() {
-        event.preventDefault();
-        $(this).css({
-          outline: '-webkit-focus-ring-color auto 3px'
-        })
-
-      });
+      $(target).focus();
   })
 
 });

@@ -190,6 +190,8 @@ a.nav-link.active {
   background: transparent !important;
   color: black !important;
   transform: scale(1.2);
+  text-decoration: underline;
+
   margin-left: 10px;
 }
 
