@@ -70,27 +70,60 @@
   <span id="menu-btn" state="open" style="font-size:30px;cursor:pointer">&#9776;</span> -->
 <section>
   <div class="container main">
-    <div class="section-header">
-      <h2><a href="#" id="section1">Labels and Inputs</a></h2>
+  <div class="section-header">
+    <h2><a href="#" id="section1">Labels and Inputs</a></h2>
+  </div>
+  <div class="row form-area">
+    <div class="col col-md-5 flex-column good">
+      <div class="good-header">
+        <h3>Do</h3>
+      </div>
+      <div class="form-container">
+        <form name="signup" id="signup">
+          <h2>Join Our Club!</h2>
+          <p id="errors" aria-live="assertive">
+          </p>
+          <p>
+            <div class="example1">
+              <label for="first">Enrollment ID</label>
+              <i class="fas fa-question-circle" data-toggle="tooltip" data-placement="top" title="8 digit code on the test booklet cover" id="enrollment-info"></i>
+            </div>
+            <input type="text" id="enrollment">
+          </p>
+            <button type="submit" name="button" id="signup-btn" value="Submit">Sign Up</button>
+          </p>
+        </form>
+      </div>
+    </div>
+    <div class="col col-md-5 flex-column bad">
+      <div class="bad-header">
+        <h3>Don't</h3>
+      </div>
+      <div class="form-container">
+        <form name="signup" id="signup">
+          <h2>Join Our Club!</h2>
+          <p id="errors" aria-live="assertive">
+          </p>
+          <p>
+            <div class="example1">
+              <label for="first">Enrollment ID</label>
+              <i class="fas fa-question-circle" data-toggle="tooltip" data-placement="top" title="8 digit code on the test booklet cover" id="enrollment-info"></i>
+            </div>
+            <input type="text" id="enrollment">
+          </p>
+            <button type="submit" name="button" id="signup-btn" value="Submit">Sign Up</button>
+          </p>
+        </form>
+      </div>
     </div>
 
-    <div class="form-area">
-      <form name="signup" id="signup">
-        <h2>Join Our Club!</h2>
-        <p id="errors" aria-live="assertive">
-        </p>
-        <p>
-          <div class="example1">
-            <label for="first">Enrollment ID</label>
-            <i class="fas fa-question-circle" data-toggle="tooltip" data-placement="top" title="8 digit code on the test booklet cover" id="enrollment-info"></i>
-          </div>
-          <input type="text" id="enrollment">
-        </p>
-        <p>
-          <button type="submit" name="button" id="signup-btn" value="Submit">Sign Up</button>
-        </p>
-      </form>
-    </div>
+  </div>
+  <div class="container">
+    <p class="explainer-text">This example shows a lot of things. I'm still determining what those are. All this text is just for formatting purposes. And nothing more. </p>
+  </div>
+  <div class="">
+    <p>scroll down</p>
+  </div>
   </div>
 
 </section>
