@@ -9,10 +9,6 @@ $(document).ready(function() {
       document.getElementById("myScrollspy").style.width = "0";
       document.getElementById("main").style.marginLeft= "0";
   }
-
-
-
-
   // $('#menu-btn').on('click', function(){
   //   console.log("here");
   //   if($(this).attr('state') == 'open') {
@@ -26,6 +22,8 @@ $(document).ready(function() {
   // })
 
   $('.closebtn').on('click', function() {
+    $('button.hamburger').removeClass('is-active')
+    $('button.hamburger').attr('state', 'closed')
     closeNav();
   })
 $('[data-toggle="tooltip"]').tooltip()
@@ -64,11 +62,36 @@ $('[data-toggle="tooltip"]').tooltip()
   })
 
   $(document).on('keyup', function(event) {
-    console.log('here');
-    if(event.key == '27' && $('button.hamburger').attr('state') === 'open') {
-      console.log('not here;')
+    console.log(event);
+    if(event.key == 'Escape' && $('button.hamburger').attr('state') === 'open') {
+      console.log('not here;');
+      $('button.hamburger').removeClass('is-active')
+      $('button.hamburger').attr('state', 'closed')
       closeNav();
     }
+  })
+
+
+
+
+
+  $("a.nav-link").on('click', function(event) {
+    console.log(event);
+    let href = $(this).attr('href');
+    var linkScrollPosition = $(document).scrollTop();
+    console.log(linkScrollPosition);
+    $([document.documentElement, document.body]).animate({
+      scrollTop: $(href).offset().top - 30
+    }, 1500);
+    let target = href;
+    console.log(target);
+      $(target)[0].focus(function() {
+        event.preventDefault();
+        $(this).css({
+          outline: '-webkit-focus-ring-color auto 3px'
+        })
+
+      });
   })
 
 });

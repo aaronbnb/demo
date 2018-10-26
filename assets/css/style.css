@@ -27,9 +27,10 @@ div.navbarNavDropdown, div.collapse {
 
 a.nav-link {
   font-family: 'Cabin', sans-serif;
-  font-size: 12px;
-  color: #999;
-  padding-bottom: 0em;
+  font-size: .8em;
+  color: #8c8c8c;
+  padding-bottom: .1em;
+  padding-top: .4em;
   text-transform: uppercase;
 }
 
@@ -188,6 +189,35 @@ button#menu-btn {
 a.nav-link.active {
   background: transparent !important;
   color: black !important;
-  transform: scale(1.1);
+  transform: scale(1.2);
   margin-left: 10px;
+}
+
+div.tick {
+  height: 6px;
+  width: 5px;
+  border-style: solid;
+  border-color: #b5b5b5;
+  padding-bottom: 4px;
+  border-bottom-width: 2px;
+  margin-left: 32px;
+}
+
+div.mid {
+  padding-top: 2px;
+  margin-bottom: 2px;
+}
+
+a:focus {
+  outline: -webkit-focus-ring-color auto 3px !important;
+}
+
+div.preview-text {
+  width: 80%;
+  max-width: 760px;
+  margin-top: 1em;
+}
+
+div.section-header {
+  padding: 50px;
 }
