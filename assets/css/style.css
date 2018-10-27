@@ -11,6 +11,10 @@ h1 {
   font-family: 'Raleway', sans-serif;
 }
 
+h3 {
+  font-size: 1.4em;
+}
+
 #big-boss {
   text-decoration: underline;
   color: #1d1d1d;
@@ -114,19 +118,12 @@ div.form-area {
   border: 1px solid lightgrey;
   height: 400px;
   justify-content: space-around;
+  background-color: #f2f2f2;
 }
 
 div.main {
   height: 100%;
 }
-
-form#signup {
-  padding: 20px;
-  font-family: 'Monserrat', sans-serif;
-  display: block;
-}
-
-
 
 button#enrollment {
   width: 30px;
@@ -232,37 +229,77 @@ div.section-header {
 }
 
 div.bad {
-  border-width: 2px;
+  border-top-width: 3px;
   border-style: solid;
-  border-radius: 3%;
+  /* border-radius: 3%; */
   border-color: #D0021B;
   margin: .5em;
 
-  /* background: #ef3b36; /* fallback for old browsers */
-  /* background: -webkit-linear-gradient(to top, #ef3b36, #ffffff); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to top, #ffcccc, #fff9f9, #ffffff);
-
-  /* background-image: radial-gradient(#ef3b36, #ffffff); */
+  /* background: linear-gradient(to bottom, #f2f2f2, #dbdbdb); */
 }
 
 div.good {
-  border-width: 2px;
+
+
+  border-top-width: 3px;
   border-style: solid;
-  border-radius: 3%;
+  /* border-radius: 3%; */
   border-color: #3075C5;
   margin: .5em;
-  background: #2980b9; /* fallback for old browsers */
-    background: -webkit-linear-gradient(to top, #2980b9, #6dd5fa, #ffffff); /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to top, #c9ddff, #f4f5ff, #ffffff);
+  /* background: linear-gradient(to bottom, #f2f2f2, #dbdbdb); */
 
 }
 
 div.section-header {
   text-align: center;
+
 }
 
 
 form {
-  background-color: #f2f2f2;
-  border: 1px solid #515151;
+  text-rendering: optimizeLegibility;
+    -webkit-box-shadow: 0 2px 4px 0 rgba(153,153,153,.75);
+    -moz-box-shadow: 0 2px 4px 0 rgba(153,153,153,.75);
+    box-shadow: 0 2px 4px 0 rgba(153,153,153,.75);
+    -webkit-transition: height .4s,-webkit-box-shadow 1s linear;
+    -moz-transition: height .4s,-moz-box-shadow 1s linear;
+    -o-transition: height .4s,box-shadow 1s linear;
+    transition: height .4s,box-shadow 1s linear;
+    padding: 20px;
+    font-family: 'Monserrat', sans-serif;
+    display: block;
+    background: #fcfcfc;
+}
+
+h2 a {
+  color: black;
+  font-family: 'Gothic A1', sans-serif;
+  font-weight: 600;
+}
+
+p.extra-description {
+  font-size: .8em;
+  color: #404040;
+}
+
+label {
+  margin-bottom: 4px;
+}
+
+p.explainer-text {
+  font-family: 'Gothic A1', sans-serif;
+}
+
+form button {
+  letter-spacing: 1px;
+font-size: 15px;
+line-height: 2em;
+width: 150px;
+background: #0077C5;
+color: white;
+border: #0077C5;
+  box-shadow: 0 2px 4px 0 rgba(153,153,153,.75);
+  border-radius: 3px;
+    font-family: 'Monserrat', sans-serif;
+/* box-shadow: 0 2px 4px -1px rgba(0,0,0,0.06), 0 4px 5px 0 rgba(0,0,0,0.06), 0 1px 10px 0 rgba(0,0,0,0.08); */
 }

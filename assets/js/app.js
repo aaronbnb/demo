@@ -1,8 +1,8 @@
 $(document).ready(function() {
 
   function openNav() {
-      document.getElementById("myScrollspy").style.width = "250px";
-      document.getElementById("main").style.marginLeft = "250px";
+      document.getElementById("myScrollspy").style.width = "260px";
+      document.getElementById("main").style.marginLeft = "260px";
   }
 
   function closeNav() {
@@ -23,7 +23,8 @@ $(document).ready(function() {
 
   $('.closebtn').on('click', function() {
     $('button.hamburger').removeClass('is-active')
-    $('button.hamburger').attr('state', 'closed')
+    $('button.hamburger').attr({'state': 'closed',
+                  'title': 'Open Menu'})
     closeNav();
   });
 
@@ -54,11 +55,13 @@ $('[data-toggle="tooltip"]').tooltip()
     console.log("here");
     if($(this).attr('state') == 'open') {
       $(this).removeClass('is-active')
-      $(this).attr('state', 'closed')
+      $(this).attr({'state': 'closed',
+                    'title': 'Open Menu'})
       closeNav();
     } else {
       $(this).addClass('is-active')
-      $(this).attr('state', 'open')
+      $(this).attr({'state': 'open',
+                    'title': 'Close Menu'})
       openNav();
     }
 
@@ -69,7 +72,8 @@ $('[data-toggle="tooltip"]').tooltip()
     if(event.key == 'Escape' && $('button.hamburger').attr('state') === 'open') {
       console.log('not here;');
       $('button.hamburger').removeClass('is-active')
-      $('button.hamburger').attr('state', 'closed')
+      $('button.hamburger').attr({'state': 'closed',
+                    'title': 'Open Menu'})
       closeNav();
     }
   })

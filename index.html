@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="assets/css/sidenav.css">
   <meta charset="utf-8">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-  <link href="https://fonts.googleapis.com/css?family=Lato|Cabin|Monserrat|Forum|Didact+Gothic|Raleway" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Cabin|Monserrat|Forum|Gothic+A1|Raleway" rel="stylesheet">
   <script
     src="https://code.jquery.com/jquery-3.3.1.js"
     integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
@@ -33,33 +33,57 @@
     <a href="javascript:void(0)" class="closebtn">&times;</a>
   </div>
   <ul class="nav nav-pills flex-column">
-    <a class="nav-link" href="#section1">1. Labels and Inputs</a>
+    <a class="nav-link" href="#section1">1. Inputs and Labels</a>
     <div class="tick" aria-hidden="true"></div>
     <div class="tick mid" aria-hidden="true"></div>
     <div class="tick" aria-hidden="true"></div>
-    <a class="nav-link" href="#section2">2. Dynamic Error Handling</a>
+    <a class="nav-link" href="#section2">2. Be Dynamic</a>
     <div class="tick" aria-hidden="true"></div>
     <div class="tick mid" aria-hidden="true"></div>
     <div class="tick" aria-hidden="true"></div>
-    <a class="nav-link" href="#section3">3. Presetting Results</a>
+    <a class="nav-link" href="#section3">3. Descriptive Errors</a>
     <div class="tick" aria-hidden="true"></div>
     <div class="tick mid" aria-hidden="true"></div>
     <div class="tick" aria-hidden="true"></div>
-    <a class="nav-link" href="#section4">4. Keyboard Interactions</a>
+    <a class="nav-link" href="#section4">4. Set Focus To Errors</a>
     <div class="tick" aria-hidden="true"></div>
     <div class="tick mid" aria-hidden="true"></div>
     <div class="tick" aria-hidden="true"></div>
-    <a class="nav-link" href="#section5">5. Additional Descriptions</a>
+    <a class="nav-link" href="#section5">5. Display Helper Text</a>
+    <div class="tick" aria-hidden="true"></div>
+    <div class="tick mid" aria-hidden="true"></div>
+    <div class="tick" aria-hidden="true"></div>
+    <a class="nav-link" href="#section6">6. HTML easier than PDF </a>
+    <div class="tick" aria-hidden="true"></div>
+    <div class="tick mid" aria-hidden="true"></div>
+    <div class="tick" aria-hidden="true"></div>
+    <a class="nav-link" href="#section7">7. Let Screen Readers Know</a>
+    <div class="tick" aria-hidden="true"></div>
+    <div class="tick mid" aria-hidden="true"></div>
+    <div class="tick" aria-hidden="true"></div>
+    <a class="nav-link" href="#section8">8. Use Clear Input Fields</a>
+    <div class="tick" aria-hidden="true"></div>
+    <div class="tick mid" aria-hidden="true"></div>
+    <div class="tick" aria-hidden="true"></div>
+    <a class="nav-link" href="#section9">9. Autocomplete Info</a>
+    <div class="tick" aria-hidden="true"></div>
+    <div class="tick mid" aria-hidden="true"></div>
+    <div class="tick" aria-hidden="true"></div>
+    <a class="nav-link" href="#section10">10. Live Regions</a>
+    <div class="tick" aria-hidden="true"></div>
+    <div class="tick mid" aria-hidden="true"></div>
+    <div class="tick" aria-hidden="true"></div>
+    <a class="nav-link" href="#section10">Accessibility Statement</a>
   </ul>
 </nav>
 
 <main id="main">
 
-  <button class="hamburger hamburger--arrow is-active" type="button" state="open" id="menu-btn">
+  <button class="hamburger hamburger--arrow is-active" type="button" state="open" id="menu-btn" title="Close Menu">
   <span class="hamburger-box">
     <span class="hamburger-inner"></span>
   </span>
-</button>
+  </button>
 
 <!-- <h1 id="big-boss-title"><a href="#" id="big-boss">Forms.</a></h1>
 <div class="container preview-text">
@@ -71,7 +95,7 @@
 <section>
   <div class="container main">
   <div class="section-header">
-    <h2><a href="#" id="section1">Labels and Inputs</a></h2>
+    <h2><a href="#" id="section1">Display helper text.</a></h2>
   </div>
   <div class="row form-area">
     <div class="col col-md-5 flex-column good">
@@ -80,17 +104,16 @@
       </div>
       <div class="form-container">
         <form name="signup" id="signup">
-          <h2>Join Our Club!</h2>
           <p id="errors" aria-live="assertive">
           </p>
           <p>
             <div class="example1">
               <label for="first">Enrollment ID</label>
-              <i class="fas fa-question-circle" data-toggle="tooltip" data-placement="top" title="8 digit code on the test booklet cover" id="enrollment-info"></i>
             </div>
             <input type="text" id="enrollment">
+            <p class="extra-description">8 digit code on the test booklet cover</p>
           </p>
-            <button type="submit" name="button" id="signup-btn" value="Submit">Sign Up</button>
+            <button type="submit" name="button" value="Submit">Score Your Test!</button>
           </p>
         </form>
       </div>
@@ -101,7 +124,6 @@
       </div>
       <div class="form-container">
         <form name="signup" id="signup">
-          <h2>Join Our Club!</h2>
           <p id="errors" aria-live="assertive">
           </p>
           <p>
@@ -111,7 +133,7 @@
             </div>
             <input type="text" id="enrollment">
           </p>
-            <button type="submit" name="button" id="signup-btn" value="Submit">Sign Up</button>
+            <button type="submit" name="button" value="Submit">Enter</button>
           </p>
         </form>
       </div>
@@ -267,6 +289,31 @@
   </div>
 
 </section>
+<section>
+  <div class="container main">
+    <div class="section-header">
+      <h2><a href="#" id="section6">Additional Descriptions</a></h2>
+    </div>
+    <div class="form-area">
+      <form name="signup" id="signup">
+        <h2>Join Our Club!</h2>
+        <p id="errors" aria-live="assertive">
+        </p>
+        <p>
+          <div class="example1">
+            <label for="first">Enrollment ID</label>
+            <i class="fas fa-question-circle" data-toggle="tooltip" data-placement="top" title="8 digit code on the test booklet cover" id="enrollment-info"></i>
+          </div>
+          <input type="text" id="enrollment">
+        </p>
+          <button type="submit" name="button" id="signup-btn" value="Submit">Sign Up</button>
+        </p>
+      </form>
+    </div>
+  </div>
+
+</section>
+
 
 </main>
 </body>
