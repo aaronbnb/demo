@@ -1,6 +1,6 @@
 .sidenav {
     height: 100%;
-    width: 250px;
+    width: 260px;
     position: fixed;
     z-index: 1;
     top: 0;
@@ -43,7 +43,7 @@ margin-left: 50px;
 #main {
     transition: margin-left .5s;
     padding: 16px;
-    margin-left: 250px;
+    margin-left: 260px;
 }
 
 @media screen and (max-height: 450px) {

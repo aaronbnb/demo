@@ -9,6 +9,13 @@ $(document).ready(function() {
       document.getElementById("myScrollspy").style.width = "0";
       document.getElementById("main").style.marginLeft= "0";
   }
+
+  if(localStorage.getItem('menu') === 'closed') {
+    $('button.hamburger').removeClass('is-active')
+    $('button.hamburger').attr({'aria-expanded': 'false',
+                  'title': 'Open Menu'})
+    closeNav();
+  }
   // $('#menu-btn').on('click', function(){
   //   console.log("here");
   //   if($(this).attr('state') == 'open') {
@@ -23,9 +30,11 @@ $(document).ready(function() {
 
   $('.closebtn').on('click', function() {
     $('button.hamburger').removeClass('is-active')
-    $('button.hamburger').attr({'state': 'closed',
+    $('button.hamburger').attr({'aria-expanded': 'false',
                   'title': 'Open Menu'})
     closeNav();
+    localStorage.clear();
+    localStorage.setItem('menu', 'closed')
   });
 
 
@@ -53,28 +62,34 @@ $('[data-toggle="tooltip"]').tooltip()
 
   $('button.hamburger').on('click', function(){
     console.log("here");
-    if($(this).attr('state') == 'open') {
+    if($(this).attr('aria-expanded') == 'true') {
       $(this).removeClass('is-active')
-      $(this).attr({'state': 'closed',
+      $(this).attr({'aria-expanded': 'false',
                     'title': 'Open Menu'})
       closeNav();
+      localStorage.clear();
+      localStorage.setItem('menu', 'closed')
     } else {
       $(this).addClass('is-active')
-      $(this).attr({'state': 'open',
+      $(this).attr({'aria-expanded': 'true',
                     'title': 'Close Menu'})
       openNav();
+      localStorage.clear();
+      localStorage.setItem('menu','open')
     }
 
   })
 
   $(document).on('keyup', function(event) {
     console.log(event);
-    if(event.key == 'Escape' && $('button.hamburger').attr('state') === 'open') {
+    if(event.key == 'Escape' && $('button.hamburger').attr('aria-expanded') === 'true') {
       console.log('not here;');
       $('button.hamburger').removeClass('is-active')
-      $('button.hamburger').attr({'state': 'closed',
+      $('button.hamburger').attr({'aria-expanded': 'false',
                     'title': 'Open Menu'})
       closeNav();
+      localStorage.clear();
+      localStorage.setItem('menu', 'closed')
     }
   })
 
@@ -87,7 +102,7 @@ $('[data-toggle="tooltip"]').tooltip()
     let href = $(this).attr('href');
     $([document.documentElement, document.body]).animate({
       scrollTop: $(href).offset().top - 30
-    }, 1500);
+    }, 1800);
     let target = href;
     console.log(target);
       $(target).focus();

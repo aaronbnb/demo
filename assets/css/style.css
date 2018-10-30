@@ -116,20 +116,19 @@ button#signup-btn {
 
 div.form-area {
   border: 1px solid lightgrey;
-  height: 400px;
+  min-height: 20em;
   justify-content: space-around;
   background-color: #f2f2f2;
 }
 
+
 div.main {
-  height: 100%;
+  max-width: 800px;
+  margin: auto;
 }
 
-button#enrollment {
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  background-color: black;
+#enrollment {
+  max-width: 150px;
 }
 
 i#enrollment-info {
@@ -179,6 +178,8 @@ div.category {
 
 button#menu-btn {
   outline: none;
+  background-image: radial-gradient(#ffffff 15%, transparent);
+  z-index: 2;
 }
 
 a.nav-link.active {
@@ -265,10 +266,11 @@ form {
     -moz-transition: height .4s,-moz-box-shadow 1s linear;
     -o-transition: height .4s,box-shadow 1s linear;
     transition: height .4s,box-shadow 1s linear;
-    padding: 20px;
+    padding: 15px 20px 20px 20px;
     font-family: 'Monserrat', sans-serif;
     display: block;
     background: #fcfcfc;
+
 }
 
 h2 a {
@@ -279,11 +281,12 @@ h2 a {
 
 p.extra-description {
   font-size: .8em;
+  padding-top: .2em;
   color: #404040;
 }
 
 label {
-  margin-bottom: 4px;
+  margin-bottom: 0;
 }
 
 p.explainer-text {
@@ -301,5 +304,32 @@ border: #0077C5;
   box-shadow: 0 2px 4px 0 rgba(153,153,153,.75);
   border-radius: 3px;
     font-family: 'Monserrat', sans-serif;
+    cursor: pointer;
 /* box-shadow: 0 2px 4px -1px rgba(0,0,0,0.06), 0 4px 5px 0 rgba(0,0,0,0.06), 0 1px 10px 0 rgba(0,0,0,0.08); */
+}
+
+button[type="submit"]:hover, button[type="submit"]:focus {
+  background: linear-gradient(to bottom,#167CCC 0,#007ed1 100%)
+}
+
+div.form-container {
+  display: flex;
+}
+
+section {
+  width: 100%;
+  padding: 0 7%;
+  display: table;
+  margin: 0;
+  max-width: none;
+  height: 100vh;
+}
+
+div.scroll {
+  width: 100%;
+  padding: 0 7%;
+  display: table;
+  margin: 0;
+  max-width: none;
+  height: 10vh;
 }
