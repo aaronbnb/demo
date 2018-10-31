@@ -312,6 +312,13 @@ button[type="submit"]:hover, button[type="submit"]:focus {
   background: linear-gradient(to bottom,#167CCC 0,#007ed1 100%)
 }
 
+button#menu-btn:hover, button#menu-btn:focus {
+  border: 1px solid lightgrey;
+  padding: 15px 15px 10px 15px;
+  border-radius: 15%;
+}
+
+
 div.form-container {
   display: flex;
 }
@@ -323,6 +330,10 @@ section {
   margin: 0;
   max-width: none;
   height: 100vh;
+}
+
+div.main {
+  height: 90vh;
 }
 
 div.scroll {
