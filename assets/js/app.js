@@ -97,7 +97,7 @@ $('[data-toggle="tooltip"]').tooltip()
 
 
 
-  $("a.nav-link").on('click', function(event) {
+  $("ul.nav").on('click', "a.nav-link", function(event) {
     console.log(event);
     let href = $(this).attr('href');
     $([document.documentElement, document.body]).animate({
