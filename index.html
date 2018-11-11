@@ -99,7 +99,7 @@
 <section>
   <div class="container main">
   <div class="section-header">
-    <h2><a href="#" id="section1">Display helper text.</a></h2>
+    <h2 id="section1" tabindex="0">Display helper text.</h2>
   </div>
   <div class="row no-gutters form-area">
     <div class="col col-md-5 flex-column good">
@@ -108,15 +108,11 @@
       </div>
       <div class="form-container">
         <form name="signup" id="signup">
-          <p id="errors" aria-live="assertive">
-          </p>
-          <p>
             <div class="example1">
-              <label for="first">Enrollment ID</label>
+              <label for="enrollment" aria-describedby="enrollment-description">Enrollment ID</label>
             </div>
             <input type="text" id="enrollment">
-            <p class="extra-description">8 digit code on the test booklet cover</p>
-          </p>
+            <p id="enrollment-description" class="extra-description">8 digit code on the test booklet cover</p>
             <button type="submit" name="button" value="Submit">Score Your Test!</button>
         </form>
       </div>
@@ -127,15 +123,11 @@
       </div>
       <div class="form-container">
         <form name="signup" id="signup">
-          <p id="errors" aria-live="assertive">
-          </p>
-          <p>
             <div class="example1">
-              <label for="first">Enrollment ID</label>
+              <label for="enrollment2">Enrollment ID</label>
               <i class="fas fa-question-circle" data-toggle="tooltip" data-placement="top" title="8 digit code on the test booklet cover" id="enrollment-info"></i>
             </div>
-            <input type="text" id="enrollment">
-          </p>
+            <input type="text" id="enrollment2">
             <button type="submit" name="button" value="Submit">Enter</button>
         </form>
       </div>
@@ -143,20 +135,20 @@
 
   </div>
   <div class="container">
-    <p class="explainer-text">This example shows a lot of things. I'm still determining what those are. All this text is just for formatting purposes. And nothing more. </p>
+    <p class="explainer-text">This example shows a lhttps://twitter.com/css/status/1060354217381191680ot of things. I'm still determining what those are. All this text is just for formatting purposes. And nothing more. </p>
   </div>
 
   </div>
   <div class="scroll">
     <div class="scroll-down">
-      <a href="#section2"><span></span>Scroll</a>
+      <a class="scroll-arrow" href="#section2"><span></span>Scroll</a>
     </div>
   </div>
 </section>
 <section>
   <div class="container main">
   <div class="section-header">
-    <h2><a href="#" id="section2" class="demo">Display helper text.</a></h2>
+    <h2 id="section2" tabindex="0">Be dynamic. Use client-side validation.</h2>
   </div>
   <div class="row no-gutters form-area">
     <div class="col col-md-5 flex-column good">
@@ -165,16 +157,18 @@
       </div>
       <div class="form-container">
         <form name="signup" id="signup">
-          <p id="errors" aria-live="assertive">
-          </p>
-          <p>
             <div class="example1">
-              <label for="first">Enrollment ID</label>
+              <label for="email-address1">Email Address</label>
+              <input type="text" id="email-address1">
             </div>
-            <input type="text" id="enrollment">
-            <p class="extra-description">8 digit code on the test booklet cover</p>
+            <p id="sec2-errors1"></p>
+            <div class="example1">
+              <label for="password">Password</label>
+            </div>
+            <input type="text" id="password">
+            <p id="sec2-errors2"></p>
           </p>
-            <button type="submit" name="button" value="Submit">Score Your Test!</button>
+            <button type="submit" name="button" value="Submit">Create Account!</button>
         </form>
       </div>
     </div>
@@ -200,12 +194,14 @@
 
   </div>
   <div class="container">
-    <p class="explainer-text">This example shows a lot of things. I'm still determining what those are. All this text is just for formatting purposes. And nothing more. </p>
+    <p class="explainer-text">This example shows a lhttps://twitter.com/css/status/1060354217381191680ot of things. I'm still determining what those are. All this text is just for formatting purposes. And nothing more. </p>
   </div>
 
   </div>
   <div class="scroll">
-    <p>scroll down</p>
+    <div class="scroll-down">
+      <a class="scroll-arrow" href="#section3"><span></span>Scroll</a>
+    </div>
   </div>
 </section>
 <section>

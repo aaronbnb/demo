@@ -108,4 +108,16 @@ $('[data-toggle="tooltip"]').tooltip()
       $(target).focus();
   })
 
+  $('section').on('click', "a.scroll-arrow", function(event) {
+    console.log(event);
+    let href = $(this).attr('href');
+    $([document.documentElement, document.body]).animate({
+      scrollTop: $(href).offset().top - 30
+    }, 1800);
+    setTimeout( function() {
+      $(href).focus
+    }, 1000);
+  })
+
+
 });

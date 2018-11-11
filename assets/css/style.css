@@ -15,16 +15,6 @@ h3 {
   font-size: 1.4em;
 }
 
-#big-boss {
-  text-decoration: underline;
-  color: #1d1d1d;
-  text-align: center;
-}
-
-#big-boss-title {
-  text-align: center;
-}
-
 div.navbarNavDropdown, div.collapse {
   justify-content: flex-end;
 }
@@ -125,6 +115,7 @@ div.form-area {
 div.main {
   max-width: 800px;
   margin: auto;
+  height: 90vh;
 }
 
 #enrollment {
@@ -139,41 +130,8 @@ i#enrollment-info {
     margin-left: 2px;
 }
 
-img#question {
-  width: 16px;
-}
-
 [data-toggle=tooltip] {
   margin-left: 2px;
-}
-
-div.cards {
-  display: flex;
-  justify-content: space-around;
-}
-
-
-div.thumb {
-  border: 1px solid #bcbcbc;
-  font-family: 'Cabin', sans-serif;
-}
-
-div.title-container {
-  display: flex;
-  align-items: center;
-  font-family: 'Raleway', sans-serif;
-  font-size: 16px;
-  color: #1d1d1d;
-}
-
-div.category {
-  width: 90%;
-    max-width: 960px;
-    margin: 0 auto;
-    padding-top: 1.5em;
-    padding-bottom: 1.5em;
-    border-bottom: 1px solid #999;
-    margin-bottom: 1em;
 }
 
 button#menu-btn {
@@ -210,17 +168,6 @@ a:focus {
   outline: -webkit-focus-ring-color auto 3px !important;
 }
 
-div.preview-text {
-  width: 80%;
-  max-width: 760px;
-  margin-top: 1em;
-}
-
-div.section-header {
-  padding: 20px;
-}
-
-
 .good-header {
   color: #3075C5;
 }
@@ -253,9 +200,9 @@ div.good {
 
 div.section-header {
   text-align: center;
+  padding: 20px;
 
 }
-
 
 form {
   text-rendering: optimizeLegibility;
@@ -271,12 +218,6 @@ form {
     display: block;
     background: #fcfcfc;
 
-}
-
-h2 a {
-  color: black;
-  font-family: 'Gothic A1', sans-serif;
-  font-weight: 600;
 }
 
 p.extra-description {
@@ -319,61 +260,48 @@ button#menu-btn:hover {
 }
 
 
-div.form-container {
-  display: flex;
-}
-
 section {
   width: 100%;
   padding: 0 7%;
-  display: table;
+  /* display: block; */
+  /* align-items: center; */
   margin: 0;
+  /* position: relative; */
   max-width: none;
   height: 100vh;
 }
 
-div.main {
-  height: 90vh;
-}
-
 div.scroll {
-  width: 100%;
-  padding: 0 7%;
-  display: table;
-  margin: 0;
-  max-width: none;
-  height: 10vh;
+     /* width: 100%; */
+    /* padding: 0 7%; */
+    margin: 0 auto;
+    max-width: none;
+    max-width: 800px;
+    display: flex;
+    justify-content: center;
+ 
 }
 
 div.scroll-down {
-  position: relative;
   width: 100%;
   height: 100%;
+  display: flex;
+  justify-content: center;
 }
 div.scroll-down::after {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  content: '';
   width: 100%;
 }
 
-
-
-
 .scroll-down a {
-  position: absolute;
-  left: 50%;
-  z-index: 2;
-  display: inline-block;
-  -webkit-transform: translate(0, -50%);
-  transform: translate(0, -50%);
-  color: black;
-  font : normal 400 20px/1 'Josefin Sans', sans-serif;
-  letter-spacing: .1em;
-  text-decoration: none;
-  transition: opacity .3s;
-  padding-top: 60px;
+    display: inline-block;
+    -webkit-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+    color: black;
+    font: normal 400 20px/1 sans-serif;
+    letter-spacing: .1em;
+    text-decoration: none;
+    transition: opacity .3s;
+    padding-top: 60px;
 }
 .scroll-down a span {
   position: absolute;
@@ -393,9 +321,9 @@ div.scroll-down::after {
 
 .scroll-down a:hover span:hover {
   opacity: .8;
-  border-left: 3px solid black;
-  border-bottom: 2px solid black;
-  font-weight: 500;
+  border-left: 4px solid black;
+  border-bottom: 4px solid black;
+  
 }
 
 @-webkit-keyframes sdb04 {
@@ -419,4 +347,15 @@ div.scroll-down::after {
   40% {
     transform: rotate(-45deg) translate(0, 0);
   }
+}
+#enrollment2 {
+  margin-bottom: 1em;
+}
+
+#sec2-errors1 {
+  height: 1em;
+}
+
+#sec2-errors2 {
+  height: 1em;
 }
