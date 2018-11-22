@@ -4,11 +4,14 @@
 <head>
   <meta charset="utf-8">
   <link rel="stylesheet" href="assets/css/reset.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
   <link rel="stylesheet" href="assets/css/hamburger.css">
   <link rel="stylesheet" href="assets/css/sidenav.css">
+  <link rel="stylesheet" href="assets/css/style.css">
 
+  <title>Dynamic Forms</title>
+  
   <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
   <link href="https://fonts.googleapis.com/css?family=Cabin|Monserrat|Forum|Gothic+A1|Raleway" rel="stylesheet">
   <script
     src="https://code.jquery.com/jquery-3.3.1.js"
@@ -17,17 +20,17 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
 
-  <script type="text/javascript" src="assets/js/locales/en.min.js"></script>
-  <script type="text/javascript" src="assets/js/datepicker.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  
   <link rel="icon" href="https://res.cloudinary.com/dn4jhnh54/image/upload/ar_16:9,c_scale,h_212/v1537732914/aaron-logo1_qxqqek_jifqns.png">
-  <link rel="stylesheet" href="assets/css/style.css">
-  <script type="text/javascript" src="assets/js/app.js">
-
-  </script>
+ 
+  <link rel="stylesheet" href="assets/css/aria.css">
+ 
+  <script type="text/javascript" src="assets/js/app.js"></script>
+  <script type="text/javascript" src="assets/js/section2.js"></script>
   <script type="text/javascript" src="assets/js/relationships.js"></script>
 
-  <title>Dynamic Forms</title>
+  
 </head>
 </head>
 <body data-spy="scroll" data-target="#myScrollspy" data-offset="140">
@@ -89,13 +92,13 @@
     </span>
   </button>
 
-<!-- <h1 id="big-boss-title"><a href="#" id="big-boss">Forms.</a></h1>
-<div class="container preview-text">
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-</div> -->
 
-<!--
-  <span id="menu-btn" state="open" style="font-size:30px;cursor:pointer">&#9776;</span> -->
+<!-- 
+  
+  Section 1 
+
+-->
+
 <section>
   <div class="container main">
   <div class="section-header">
@@ -107,13 +110,13 @@
         <h3>Do</h3>
       </div>
       <div class="form-container">
-        <form name="signup" id="signup">
+        <form>
             <div class="example1">
               <label for="enrollment" aria-describedby="enrollment-description">Enrollment ID</label>
             </div>
-            <input type="text" id="enrollment">
+            <input type="text" id="enrollment" class="form-control form-input extra-reduced">
             <p id="enrollment-description" class="extra-description">8 digit code on the test booklet cover</p>
-            <button type="submit" name="button" value="Submit">Score Your Test!</button>
+            <button type="submit" name="button" value="Submit" disabled>Score Your Test!</button>
         </form>
       </div>
     </div>
@@ -123,12 +126,15 @@
       </div>
       <div class="form-container">
         <form name="signup" id="signup">
+           
             <div class="example1">
-              <label for="enrollment2">Enrollment ID</label>
+            
+              <label for="enrollment2" id="enrollment-info2">Enrollment ID</label>
               <i class="fas fa-question-circle" data-toggle="tooltip" data-placement="top" title="8 digit code on the test booklet cover" id="enrollment-info"></i>
             </div>
-            <input type="text" id="enrollment2">
-            <button type="submit" name="button" value="Submit">Enter</button>
+            <input type="text" id="enrollment2" class="form-control form-input extra-reduced">
+        
+            <button type="submit" name="button" value="Submit" disabled>Enter</button>
         </form>
       </div>
     </div>
@@ -145,6 +151,13 @@
     </div>
   </div>
 </section>
+
+<!-- 
+  
+  Section 2
+
+-->
+
 <section>
   <div class="container main">
   <div class="section-header">
@@ -156,18 +169,17 @@
         <h3>Do</h3>
       </div>
       <div class="form-container">
-        <form name="signup" id="signup">
-            <div class="example1">
+        <form id="dynamic-do-form" autocomplete="off">
+            <div class="input-container">
               <label for="email-address1">Email Address</label>
-              <input type="text" id="email-address1">
+              <input type="text" id="email-address1" class="form-control form-input reduced"/>
+              <p class="feedback" id="sec2-do-email-errors1" aria-live="polite"></p>    
             </div>
-            <p id="sec2-errors1"></p>
-            <div class="example1">
-              <label for="password">Password</label>
+            <div class="input-container">
+              <label for="password1">Password</label>
+              <input type="password" id="password1" class="form-control form-input extra-reduced" />
+              <p class="feedback" id="sec2-do-pw-errors1" aria-live="polite"></p>
             </div>
-            <input type="text" id="password">
-            <p id="sec2-errors2"></p>
-          </p>
             <button type="submit" name="button" value="Submit">Create Account!</button>
         </form>
       </div>
@@ -177,18 +189,18 @@
         <h3>Don't</h3>
       </div>
       <div class="form-container">
-        <form name="signup" id="signup">
-          <p id="errors" aria-live="assertive">
-          </p>
-          <p>
-            <div class="example1">
-              <label for="first">Enrollment ID</label>
-              <i class="fas fa-question-circle" data-toggle="tooltip" data-placement="top" title="8 digit code on the test booklet cover" id="enrollment-info"></i>
-            </div>
-            <input type="text" id="enrollment">
-          </p>
-            <button type="submit" name="button" value="Submit">Enter</button>
-        </form>
+        <form id="dynamic-dont-form" autocomplete="off">
+          <div id="brittle-errors" tabindex="-1"></div>
+          <div class="input-container">
+            <label for="email-address2">Email Address</label>
+            <input type="text" id="email-address2" class="form-control form-input reduced paddy"/>   
+          </div>
+          <div class="input-container">
+            <label for="password1">Password</label>
+            <input type="password" id="password2" class="form-control form-input extra-reduced paddy" />
+          </div>
+          <button type="submit" name="button" value="Submit">Submit</button>
+      </form>
       </div>
     </div>
 
@@ -204,10 +216,18 @@
     </div>
   </div>
 </section>
+
+<!-- 
+  
+  Section 3
+
+-->
+
+
 <section>
   <div class="container main">
   <div class="section-header">
-    <h2><a href="#" id="section3">Display helper text.</a></h2>
+    <h2><a href="#" id="section3">Clear formatting and intuitive form constraints.</a></h2>
   </div>
   <div class="row no-gutters form-area">
     <div class="col col-md-5 flex-column good">
@@ -350,7 +370,7 @@
 <section>
   <div class="container main">
     <div class="section-header">
-      <h2><a href="#" id="section6" >Preset Values</a></h2>
+      <h2><a href="#" id="section6">Preset Values</a></h2>
     </div>
     <div class="form-area">
       <form name="signup" id="signup">

@@ -2,9 +2,20 @@
   display: none;
 }
 
+input {
+  border: 1px solid #C1C5C8;
+  border-radius: 3px;
+  transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
 
 h2, h3, h4, h5 {
   font-family: 'Cabin', sans-serif;
+}
+
+h2:focus {
+  outline: none;
+  text-decoration: underline;
 }
 
 h1 {
@@ -168,6 +179,18 @@ a:focus {
   outline: -webkit-focus-ring-color auto 3px !important;
 }
 
+input.form-input {
+  height: calc(2rem);
+}
+
+input.form-input:focus {
+  border: 1px solid #52A8EC;
+  outline: 0;
+  transition:  ease(0.2s);
+  border-color: rgba(82,168,236,.8);
+  box-shadow: 0 1px 1px rgba(0,0,0,.075) inset, 0 0 8px rgba(82,168,236,.6);
+}
+
 .good-header {
   color: #3075C5;
 }
@@ -214,7 +237,6 @@ form {
     -o-transition: height .4s,box-shadow 1s linear;
     transition: height .4s,box-shadow 1s linear;
     padding: 15px 20px 20px 20px;
-    font-family: 'Monserrat', sans-serif;
     display: block;
     background: #fcfcfc;
 
@@ -224,11 +246,10 @@ p.extra-description {
   font-size: .8em;
   padding-top: .2em;
   color: #404040;
+  margin-bottom: 0.5em;
 }
 
-label {
-  margin-bottom: 0;
-}
+
 
 p.explainer-text {
   font-family: 'Gothic A1', sans-serif;
@@ -246,6 +267,7 @@ border: #0077C5;
   border-radius: 3px;
     font-family: 'Monserrat', sans-serif;
     cursor: pointer;
+    margin-top: 5px;
 /* box-shadow: 0 2px 4px -1px rgba(0,0,0,0.06), 0 4px 5px 0 rgba(0,0,0,0.06), 0 1px 10px 0 rgba(0,0,0,0.08); */
 }
 
@@ -358,4 +380,58 @@ div.scroll-down::after {
 
 #sec2-errors2 {
   height: 1em;
+}
+
+label {
+  margin-bottom: 0;
+  display: block;
+}
+
+#enrollment-info2 {
+  display: inline-block;
+}
+
+.feedback {
+  margin-top: .25rem;
+  font-size: 80%;
+  height: 24px;
+  margin: 0px;
+}
+
+.error {
+  color: #dc3545;
+}
+
+.valid {
+  color: #28a745;
+}
+
+.reduced {
+  width: 90%;
+}
+
+.extra-reduced {
+  width: 60%;
+}
+
+.paddy {
+  margin-bottom: 12px;
+}
+
+.error-box {
+
+  color: #eb3432;
+  border: 2px solid #eb3432;
+  outline: 0;
+  margin-bottom: 10px;
+  padding: 2px;
+  font-size: 90%;
+}
+
+.error-box:focus {
+  box-shadow: 0 0 1px 4px #ffbf47;
+}
+
+.brittle-error {
+  margin-bottom: .25em;
 }

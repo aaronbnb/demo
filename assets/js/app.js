@@ -16,17 +16,6 @@ $(document).ready(function() {
                   'title': 'Open Menu'})
     closeNav();
   }
-  // $('#menu-btn').on('click', function(){
-  //   console.log("here");
-  //   if($(this).attr('state') == 'open') {
-  //     console.log('here')
-  //     $(this).attr('state', 'closed');
-  //
-  //   } else {
-  //     $(this).attr('state', 'open');
-  //     openNav();
-  //   }
-  // })
 
   $('.closebtn').on('click', function() {
     $('button.hamburger').removeClass('is-active')
@@ -39,26 +28,6 @@ $(document).ready(function() {
 
 
 $('[data-toggle="tooltip"]').tooltip()
-
-  $('form#signup').on('submit', function() {
-
-    if($('#first').val() == '') {
-      console.log('error');
-      $('#errors').text('Invalid name');
-      event.preventDefault();
-    }
-    else if($('#last').val() == '') {
-      console.log('error');
-      event.preventDefault();
-    }
-    else if($('#email').val() == '') {
-      console.log('error');
-        event.preventDefault();
-    } else {
-
-    }
-
-  });
 
   $('button.hamburger').on('click', function(){
     console.log("here");

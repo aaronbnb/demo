@@ -1,0 +1,15 @@
+input[aria-invalid="true"] {
+    border: 1px solid #eb3432;
+    
+} 
+
+input[aria-invalid]:focus {
+    border: 1px solid #52A8EC;
+    outline: 0;
+    border-color: rgba(82,168,236,.8);
+    box-shadow: 0 1px 1px rgba(0,0,0,.075) inset, 0 0 8px rgba(82,168,236,.6);
+}
+
+input[aria-invalid="false"] {
+    border: 1px solid #28a745;
+}
