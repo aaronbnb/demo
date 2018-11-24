@@ -30,7 +30,7 @@ $(document).ready(function() {
 $('[data-toggle="tooltip"]').tooltip()
 
   $('button.hamburger').on('click', function(){
-    console.log("here");
+
     if($(this).attr('aria-expanded') == 'true') {
       $(this).removeClass('is-active')
       $(this).attr({'aria-expanded': 'false',
@@ -50,9 +50,8 @@ $('[data-toggle="tooltip"]').tooltip()
   })
 
   $(document).on('keyup', function(event) {
-    console.log(event);
+
     if(event.key == 'Escape' && $('button.hamburger').attr('aria-expanded') === 'true') {
-      console.log('not here;');
       $('button.hamburger').removeClass('is-active')
       $('button.hamburger').attr({'aria-expanded': 'false',
                     'title': 'Open Menu'})
@@ -62,23 +61,16 @@ $('[data-toggle="tooltip"]').tooltip()
     }
   })
 
-
-
-
-
   $("ul.nav").on('click', "a.nav-link", function(event) {
-    console.log(event);
     let href = $(this).attr('href');
     $([document.documentElement, document.body]).animate({
       scrollTop: $(href).offset().top - 30
     }, 1800);
     let target = href;
-    console.log(target);
       $(target).focus();
   })
 
   $('section').on('click', "a.scroll-arrow", function(event) {
-    console.log(event);
     let href = $(this).attr('href');
     $([document.documentElement, document.body]).animate({
       scrollTop: $(href).offset().top - 30

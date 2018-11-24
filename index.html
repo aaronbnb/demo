@@ -11,7 +11,7 @@
 
   <title>Dynamic Forms</title>
   
-  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
   <link href="https://fonts.googleapis.com/css?family=Cabin|Monserrat|Forum|Gothic+A1|Raleway" rel="stylesheet">
   <script
     src="https://code.jquery.com/jquery-3.3.1.js"
@@ -28,6 +28,7 @@
  
   <script type="text/javascript" src="assets/js/app.js"></script>
   <script type="text/javascript" src="assets/js/section2.js"></script>
+  <script type="text/javascript" src="assets/js/section3.js"></script>
   <script type="text/javascript" src="assets/js/relationships.js"></script>
 
   
@@ -161,7 +162,7 @@
 <section>
   <div class="container main">
   <div class="section-header">
-    <h2 id="section2" tabindex="0">Be dynamic. Use client-side validation.</h2>
+    <h2 id="section2" tabindex="0">Dynamic client-side feedback</h2>
   </div>
   <div class="row no-gutters form-area">
     <div class="col col-md-5 flex-column good">
@@ -227,7 +228,7 @@
 <section>
   <div class="container main">
   <div class="section-header">
-    <h2><a href="#" id="section3">Clear formatting and intuitive form constraints.</a></h2>
+    <h2 id="section3">Clear formatting and intuitive form constraints.</h2>
   </div>
   <div class="row no-gutters form-area">
     <div class="col col-md-5 flex-column good">
@@ -235,17 +236,21 @@
         <h3>Do</h3>
       </div>
       <div class="form-container">
-        <form name="signup" id="signup">
-          <p id="errors" aria-live="assertive">
-          </p>
-          <p>
-            <div class="example1">
-              <label for="first">Enrollment ID</label>
+        <form>
+            <label for="currency">Enter Donation</label>
+            <div class="input-group extra-reduced paddy">
+                <div class="input-group-prepend">
+                  <span class="input-group-text">$</span>
+                </div>
+                <input type="text" id="currency" class="form-control" placeholder="15.00">
+              </div>
+            <label for="currency">Phone Number</label>
+            <div class="input-group extra-reduced paddy">
+              <div class="input-group-prepend">
+                <span class="input-group-text"><i class="fa fa-phone" id="phone-icon" aria-hidden="true"></i></span>
+              </div>
+              <input type="tel" id="phone" class="form-control" placeholder="(916) ">
             </div>
-            <input type="text" id="enrollment">
-            <p class="extra-description">8 digit code on the test booklet cover</p>
-          </p>
-            <button type="submit" name="button" value="Submit">Score Your Test!</button>
         </form>
       </div>
     </div>
@@ -254,18 +259,22 @@
         <h3>Don't</h3>
       </div>
       <div class="form-container">
-        <form name="signup" id="signup">
-          <p id="errors" aria-live="assertive">
-          </p>
-          <p>
-            <div class="example1">
-              <label for="first">Enrollment ID</label>
-              <i class="fas fa-question-circle" data-toggle="tooltip" data-placement="top" title="8 digit code on the test booklet cover" id="enrollment-info"></i>
-            </div>
-            <input type="text" id="enrollment">
-          </p>
-            <button type="submit" name="button" value="Submit">Enter</button>
-        </form>
+          <form>
+              <label for="currency">Enter Donation</label>
+              <div class="input-group extra-reduced paddy">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text">$</span>
+                  </div>
+                  <input type="text" id="currency" class="form-control" placeholder="15.00">
+                </div>
+              <label for="currency">Phone Number</label>
+              <div class="input-group extra-reduced paddy">
+                <div class="input-group-prepend">
+                  <span class="input-group-text"><i class="fa fa-phone" id="phone-icon" aria-hidden="true"></i></span>
+                </div>
+                <input type="tel" id="phone" class="form-control" placeholder="(916) ">
+              </div>
+          </form>
       </div>
     </div>
 

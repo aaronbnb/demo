@@ -123,12 +123,6 @@ div.form-area {
 }
 
 
-div.main {
-  max-width: 800px;
-  margin: auto;
-  height: 90vh;
-}
-
 #enrollment {
   max-width: 150px;
 }
@@ -143,12 +137,6 @@ i#enrollment-info {
 
 [data-toggle=tooltip] {
   margin-left: 2px;
-}
-
-button#menu-btn {
-  outline: none;
-  background-image: radial-gradient(#ffffff 15%, transparent);
-  z-index: 2;
 }
 
 a.nav-link.active {
@@ -183,12 +171,12 @@ input.form-input {
   height: calc(2rem);
 }
 
-input.form-input:focus {
-  border: 1px solid #52A8EC;
-  outline: 0;
+input:focus {
+  border: 1px solid #52A8EC !important;
+  outline: 0 !important;
   transition:  ease(0.2s);
-  border-color: rgba(82,168,236,.8);
-  box-shadow: 0 1px 1px rgba(0,0,0,.075) inset, 0 0 8px rgba(82,168,236,.6);
+  border-color: rgba(82,168,236,.8) !important;
+  box-shadow: 0 1px 1px rgba(0,0,0,.075) inset, 0 0 8px rgba(82,168,236,.6) !important;
 }
 
 .good-header {
@@ -239,6 +227,8 @@ form {
     padding: 15px 20px 20px 20px;
     display: block;
     background: #fcfcfc;
+    width: 95%;
+    max-width: 300px;
 
 }
 
@@ -275,27 +265,41 @@ button[type="submit"]:hover, button[type="submit"]:focus {
   background: linear-gradient(to bottom,#167CCC 0,#007ed1 100%)
 }
 
-button#menu-btn:hover {
-  border: 1px solid lightgrey;
-  padding: 15px 15px 10px 15px;
-  border-radius: 15%;
+div.main {
+  max-width: 800px;
+  margin: auto;
 }
-
 
 section {
   width: 100%;
-  padding: 0 7%;
-  /* display: block; */
-  /* align-items: center; */
   margin: 0;
-  /* position: relative; */
   max-width: none;
-  height: 100vh;
+}
+
+@media (min-width: 700px) {
+  section {
+    padding: 0 7%;
+    height: 100vh;
+  }
+
+  div.main {
+    height: 90vh;
+  }
+}
+
+@media (max-width: 600px) {
+  div.main {
+    margin-bottom: 40px;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+
+  div.scroll {
+    transform: scale(.9);
+  }
 }
 
 div.scroll {
-     /* width: 100%; */
-    /* padding: 0 7%; */
     margin: 0 auto;
     max-width: none;
     max-width: 800px;
@@ -310,6 +314,7 @@ div.scroll-down {
   display: flex;
   justify-content: center;
 }
+
 div.scroll-down::after {
   width: 100%;
 }
@@ -329,8 +334,8 @@ div.scroll-down::after {
   position: absolute;
   top: 0;
   left: 50%;
-  width: 24px;
-  height: 24px;
+  width: 1.5em;
+  height: 1.5em;
   margin-left: -12px;
   border-left: 2px solid black;
   border-bottom: 2px solid black;
@@ -341,11 +346,14 @@ div.scroll-down::after {
   box-sizing: border-box;
 }
 
-.scroll-down a:hover span:hover {
+div.scroll-down:hover span {
   opacity: .8;
   border-left: 4px solid black;
   border-bottom: 4px solid black;
-  
+}
+
+div.scroll-down:hover a {
+  font-weight: 700;
 }
 
 @-webkit-keyframes sdb04 {
@@ -414,6 +422,7 @@ label {
   width: 60%;
 }
 
+
 .paddy {
   margin-bottom: 12px;
 }
@@ -434,4 +443,8 @@ label {
 
 .brittle-error {
   margin-bottom: .25em;
+}
+
+#phone-icon {
+  font-size: .8em !important;
 }

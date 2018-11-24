@@ -71,4 +71,3 @@ if(isChrome === true) {
 }
 
 checkBrowser();
-console.log(user);
