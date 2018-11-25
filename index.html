@@ -41,6 +41,10 @@
     <a href="javascript:void(0)" class="closebtn">&times;</a>
   </div>
   <ul class="nav nav-pills flex-column">
+    <a class="nav-link" href="#section0">Intro</a>
+    <div class="tick" aria-hidden="true"></div>
+    <div class="tick mid" aria-hidden="true"></div>
+    <div class="tick" aria-hidden="true"></div>
     <a class="nav-link" href="#section1">1. Inputs and Labels</a>
     <div class="tick" aria-hidden="true"></div>
     <div class="tick mid" aria-hidden="true"></div>
@@ -148,7 +152,7 @@
   </div>
   <div class="scroll">
     <div class="scroll-down">
-      <a class="scroll-arrow" href="#section2"><span></span>Scroll</a>
+      <a class="scroll-arrow" href="#section2" aria-label="Scroll to Section 2"><span></span>scroll</a>
     </div>
   </div>
 </section>
@@ -213,7 +217,7 @@
   </div>
   <div class="scroll">
     <div class="scroll-down">
-      <a class="scroll-arrow" href="#section3"><span></span>Scroll</a>
+      <a class="scroll-arrow" href="#section3" aria-label="Scroll to Section 3"><span></span>Scroll</a>
     </div>
   </div>
 </section>
@@ -223,7 +227,6 @@
   Section 3
 
 -->
-
 
 <section>
   <div class="container main">
@@ -245,11 +248,11 @@
                 <input type="text" id="currency" class="form-control" placeholder="15.00">
               </div>
             <label for="currency">Phone Number</label>
-            <div class="input-group extra-reduced paddy">
+            <div class="input-group mod-reduced paddy">
               <div class="input-group-prepend">
-                <span class="input-group-text"><i class="fa fa-phone" id="phone-icon" aria-hidden="true"></i></span>
+                <span class="input-group-text"><i class="fa fa-phone phone-icon" aria-hidden="true"></i></span>
               </div>
-              <input type="tel" id="phone" class="form-control" placeholder="(916) ">
+              <input type="tel" id="phone" class="form-control" placeholder="(555) 555-5555">
             </div>
         </form>
       </div>
@@ -265,14 +268,14 @@
                   <div class="input-group-prepend">
                     <span class="input-group-text">$</span>
                   </div>
-                  <input type="text" id="currency" class="form-control" placeholder="15.00">
+                  <input type="text" class="form-control" placeholder="15.00">
                 </div>
               <label for="currency">Phone Number</label>
-              <div class="input-group extra-reduced paddy">
+              <div class="input-group mod-reduced paddy">
                 <div class="input-group-prepend">
-                  <span class="input-group-text"><i class="fa fa-phone" id="phone-icon" aria-hidden="true"></i></span>
+                  <span class="input-group-text"><i class="fa fa-phone phone-icon" aria-hidden="true"></i></span>
                 </div>
-                <input type="tel" id="phone" class="form-control" placeholder="(916) ">
+                <input type="tel" class="form-control" placeholder="(555) 555-5555">
               </div>
           </form>
       </div>
@@ -284,68 +287,89 @@
   </div>
 
   </div>
-
-</section>
-<section>
-  <div class="container main">
-  <div class="section-header">
-    <h4>Scroll</h4>
-    <a href="#" id="scroll-btn">Display helper text.</a>
-  </div>
-  <div class="row no-gutters form-area">
-    <div class="col col-md-5 flex-column good">
-      <div class="good-header">
-        <h3>Do</h3>
-      </div>
-      <div class="form-container">
-        <form name="signup" id="signup">
-          <p id="errors" aria-live="assertive">
-          </p>
-          <p>
-            <div class="example1">
-              <label for="first">Enrollment ID</label>
-            </div>
-            <input type="text" id="enrollment">
-            <p class="extra-description">8 digit code on the test booklet cover</p>
-          </p>
-            <button type="submit" name="button" value="Submit">Score Your Test!</button>
-        </form>
-      </div>
-    </div>
-    <div class="col col-md-5 flex-column bad">
-      <div class="bad-header">
-        <h3>Don't</h3>
-      </div>
-      <div class="form-container">
-        <form name="signup" id="signup">
-          <p id="errors" aria-live="assertive">
-          </p>
-          <p>
-            <div class="example1">
-              <label for="first">Enrollment ID</label>
-              <i class="fas fa-question-circle" data-toggle="tooltip" data-placement="top" title="8 digit code on the test booklet cover" id="enrollment-info"></i>
-            </div>
-            <input type="text" id="enrollment">
-          </p>
-            <button type="submit" name="button" value="Submit">Enter</button>
-        </form>
-      </div>
-    </div>
-
-  </div>
-  <div class="container">
-    <p class="explainer-text">This example shows a lot of things. I'm still determining what those are. All this text is just for formatting purposes. And nothing more. </p>
-  </div>
-
-  </div>
   <div class="scroll">
-    <p>scroll down</p>
+    <div class="scroll-down">
+      <a class="scroll-arrow" href="#section4" aria-label="Scroll to Section 4"><span></span>Scroll</a>
+    </div>
   </div>
 </section>
+
+<!-- 
+  
+  Section 4
+
+-->
+
+<section>
+    <div class="container main">
+    <div class="section-header">
+      <h2 id="section4" tabindex="-1">Use HTML rather than PDF</h2>
+    </div>
+    <div class="row no-gutters form-area">
+      <div class="col col-md-5 flex-column good">
+        <div class="good-header">
+          <h3>Do</h3>
+        </div>
+        <div class="form-container">
+          <form>
+              <label for="currency">Enter Donation</label>
+              <div class="input-group extra-reduced paddy">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text">$</span>
+                  </div>
+                  <input type="text" id="currency" class="form-control" placeholder="15.00">
+                </div>
+              <label for="currency">Phone Number</label>
+              <div class="input-group mod-reduced paddy">
+                <div class="input-group-prepend">
+                  <span class="input-group-text"><i class="fa fa-phone phone-icon" aria-hidden="true"></i></span>
+                </div>
+                <input type="tel" id="phone" class="form-control" placeholder="(555) 555-5555">
+              </div>
+          </form>
+        </div>
+      </div>
+      <div class="col col-md-5 flex-column bad">
+        <div class="bad-header">
+          <h3>Don't</h3>
+        </div>
+        <div class="form-container">
+            <form>
+                <label for="currency">Enter Donation</label>
+                <div class="input-group extra-reduced paddy">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text">$</span>
+                    </div>
+                    <input type="text" class="form-control" placeholder="15.00">
+                  </div>
+                <label for="currency">Phone Number</label>
+                <div class="input-group mod-reduced paddy">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"><i class="fa fa-phone phone-icon" aria-hidden="true"></i></span>
+                  </div>
+                  <input type="tel" class="form-control" placeholder="(555) 555-5555">
+                </div>
+            </form>
+        </div>
+      </div>
+  
+    </div>
+    <div class="container">
+      <p class="explainer-text">This example shows a lot of things. I'm still determining what those are. All this text is just for formatting purposes. And nothing more. </p>
+    </div>
+  
+    </div>
+    <div class="scroll">
+      <div class="scroll-down">
+        <a class="scroll-arrow" href="#section3" aria-label="Scroll to Section 4"><span></span>Scroll</a>
+      </div>
+    </div>
+  </section>
+
 <section>
   <div class="container main">
     <div class="section-header">
-      <h2><a href="#" id="section5">Dynamic Error Handling</a></h2>
+      <h2 tabindex="-1"><a href="#" id="section5">Dynamic Error Handling</a></h2>
     </div>
     <div class="form-area">
       <form name="signup" id="signup">

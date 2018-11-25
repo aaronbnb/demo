@@ -46,13 +46,28 @@ $(document).ready(function() {
     })
     
 
-    $('#phone').on('keypress', function() {
-        if(event.key.match(/\D/)) {
+    phoneField.addEventListener('keypress', event => {
+        if(!event.key.match(/\d|\(|\)|\-|\s|\.|_/) || phoneField.value.match(/\d{10}/)) {
             event.preventDefault();
         }
+
     });
 
-    $('#phone').on('blur', function(){
-        area = "(" + this.value.slice(0,3) + ")"
+    phoneField.addEventListener('blur', event => {
+        var phoneNum = phoneField.value.replace(/\D/g, "");
+        var displayNumbers = ""
+        for(let i = 0; i < 10; i++) {
+            displayNumbers += phoneNum[i] ? phoneNum[i] : "_";
+        }
+        var area = "(" + displayNumbers.slice(0,3) + ")";
+        var firstSegment = " " + displayNumbers.slice(3, 6);
+        var secondSegment = "-" + displayNumbers.slice(6);
+        displayPhoneNumber = (area + firstSegment + secondSegment);
+        phoneField.value = displayPhoneNumber;
+        if (displayPhoneNumber.match(/_/)) {
+            phoneField.setAttribute('aria-invalid', 'true');
+        } else if(phoneField.getAttribute('aria-invalid') === 'true') {
+            phoneField.setAttribute('aria-invalid', 'false');
+        }
     })
 });
