@@ -22,7 +22,9 @@ h2:focus {
 }
 
 h1 {
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Cabin', sans-serif;
+  font-size: 2em;
+
 }
 
 h3 {
@@ -167,7 +169,7 @@ div.mid {
 }
 
 a:focus {
-  outline: -webkit-focus-ring-color auto 3px !important;
+  outline: -webkit-focus-ring-color auto 3px;
 }
 
 input.form-input {
@@ -198,8 +200,6 @@ div.bad {
 }
 
 div.good {
-
-
   border-top-width: 3px;
   border-style: solid;
   border-color: #3075C5;
@@ -214,19 +214,20 @@ div.section-header {
 
 form {
   text-rendering: optimizeLegibility;
-    -webkit-box-shadow: 0 2px 4px 0 rgba(153,153,153,.75);
-    -moz-box-shadow: 0 2px 4px 0 rgba(153,153,153,.75);
-    box-shadow: 0 2px 4px 0 rgba(153,153,153,.75);
-    -webkit-transition: height .4s,-webkit-box-shadow 1s linear;
-    -moz-transition: height .4s,-moz-box-shadow 1s linear;
-    -o-transition: height .4s,box-shadow 1s linear;
-    transition: height .4s,box-shadow 1s linear;
-    padding: 15px 20px 20px 20px;
-    display: block;
-    background: #fcfcfc;
-    width: 95%;
-    max-width: 300px;
-
+  -webkit-box-shadow: 0 2px 4px 0 rgba(153,153,153,.75);
+  -moz-box-shadow: 0 2px 4px 0 rgba(153,153,153,.75);
+  box-shadow: 0 2px 4px 0 rgba(153,153,153,.75);
+  -webkit-transition: height .4s,-webkit-box-shadow 1s linear;
+  -moz-transition: height .4s,-moz-box-shadow 1s linear;
+  -o-transition: height .4s,box-shadow 1s linear;
+  transition: height .4s,box-shadow 1s linear;
+  padding: 15px 20px 20px 20px;
+  display: block;
+  background: #fcfcfc;
+  width: 95%;
+  max-width: 300px;
+  border-radius: 3px;
+  
 }
 
 p.extra-description {
@@ -427,6 +428,9 @@ label {
   width: 60%;
 }
 
+.uber-reduced {
+  width: 50%;
+}
 
 .paddy {
   margin-bottom: 12px;
@@ -452,4 +456,65 @@ label {
 
 .phone-icon {
   font-size: .8em !important;
+}
+
+.small-btn {
+  width: 180px;
+}
+
+div.step {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+i.flip {
+  color: #f7f7f7;
+}
+
+div.intro-container {
+  background-color: rgb(0, 104, 173); 
+  padding: 20px;
+  border-radius: 3px;
+}
+
+p.describer {
+  color: #f7f7f7;
+
+}
+
+p.small {
+  font-size: .7em;
+}
+
+a.ex-link:hover i {
+  padding-bottom: 1px;
+  border-bottom: 2px solid  rgb(0, 104, 173);
+
+}
+
+p.intro-text {
+  margin-bottom: .7rem;
+}
+
+p.intro-text, a.intro-link {
+  color: #f7f7f7;
+  font-family: 'Cabin', sans-serif;
+}
+
+a.intro-link {
+  text-decoration: underline;
+}
+
+a.intro-link:hover, a.intro-link:focus {
+  color: grey;
+}
+
+p#last {
+  margin-bottom: 0;
+}
+
+#topper {
+  margin-top: 10px;
 }
