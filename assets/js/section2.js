@@ -68,7 +68,7 @@ $(document).ready(function() {
         } else if (!email.includes('@')) {
             setEmailErrorMessage(" Email must contain an @");
         } else if (!email.includes('.')) {
-            return false;
+            setEmailErrorMessage(" Email must contain an .");
         } else if (email.length < 6) {
             setEmailErrorMessage(" Enter a valid email");
         } else {
