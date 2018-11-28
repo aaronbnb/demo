@@ -518,3 +518,5 @@ p#last {
 #topper {
   margin-top: 10px;
 }
+
+:focus:not(:focus-visible) { outline: none }
