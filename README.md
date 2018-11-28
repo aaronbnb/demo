@@ -24,7 +24,7 @@ These exercises provide a starting point for building accessible forms. However,
 ## UI Patterns and Code Explainers
 
 ### 1. Display Clear Instructions and Helper Text
-Accessibility is about anticipating users' actions and behavior on your website. The _do_ form displays the additional instructions for the input. The  This helper text rather than compelling the user to hover over the tooltip. Also, worth mentioning that the hover effect doesn't exist on mobile. The _don't_ form presents browser compatibility issues. 
+Accessibility is about anticipating users' actions and behavior on your website. The _do_ form displays the additional instructions for the input. This helper text doesn't compel the user to another action--hovering over the tooltip. Also, worth mentioning that the hover effect doesn't exist on mobile. The _don't_ form presents browser compatibility issues. 
 
 The _do_ form also features a clear call to action--the button clearly the states the action initiated by submitting the form, while the _don't_ form provides a nebulous description, i.e. Submit or Enter. 
 
@@ -56,6 +56,7 @@ If you have any questions or issues with the form, feel free to submit an issue 
 
 Be Accessible will keep adding to this set of form examples. We'll next be adding information about modals and form controls which change text elsewhere on the page--for example, adding an item to a shopping cart.
 
-#### Special Thanks
+#### Notes + Special Thanks
+The website is accessible too. Check out the ARIA labels on links that have duplicate names. Plus, the scroll-to links actually shift focus--often forgotten! The navigation bar collapses and the content is still reachable by screen reader. We don't use display: none or other methods that mess with assistive tech. 
 
 Special credit to UX Designer Marina Lyulko for producing wireframes and helping guide the development of this training. Also thanks to David Gevorkian for seeing that accessibility is about training and education before auditing. 
