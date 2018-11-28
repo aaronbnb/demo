@@ -41,4 +41,21 @@ Progressive enhancement are layers of enhancement built on top of the core funct
 ### 4. Use HTML over PDF For Important Or Long-Term Information
 Accessibility is about more than just following the WCAG 2.0 (now WCAG 2.1!). It's about an awareness of the great diversity of user agents--that is the combination of browser, operating system, device, language, internet, and so many other technical details inherent in each user.
 
-PDF requires the user to download a file from the website. It could be blocked by their network and just generally raises questions about security. Then the user must actually have software to read the PDF, which can't be assumed especially on mobile. A PDF form is 
+PDF requires the user to download a file from the website. It could be blocked by their network and just generally raises questions about security. Then the user must actually have software to read the PDF, which can't be assumed especially on mobile. 
+
+A PDF made accessible at a low level will still be far less accessible than HTML. Unless the PDF is correctly formatted, it will basically be read as a long run-on sentence. 
+
+The _do_ form also replaces the text input for health plan with a dropdown. Radio buttons and choices that clearly tell the user, sighted or visually impaired, that a valid option was selected are best.
+
+### Accessibility Statement
+Websites should have an accessiblity statement. The statement provides visitors, that have trouble using the site, with a point of contact for raising issues. This outlet for feedback is an important part of accessibility. Managing accessibility is an iterative process. The accessibility statement is a place for organizations to explain their accessibility efforts and the state of their site. This is a clear signal of empathy and attention to the issue. The accessibility statement is meant to be an honest statement, not a legal one. It's an acknowledgement of work to be done and a chance to highlight support for assistive tech.
+
+If you have any questions or issues with the form, feel free to submit an issue here on GitHub or hit up Be Accessible on our website, or use Twitter to get in contact--whatever is your preferred medium!
+
+### Future Features
+
+Be Accessible will keep adding to this set of form examples. We'll next be adding information about modals and form controls which change text elsewhere on the page--for example, adding an item to a shopping cart.
+
+#### Special Thanks
+
+Special credit to UX Designer Marina Lyulko for producing wireframes and helping guide the development of this training. Also thanks to David Gevorkian for seeing that accessibility is about training and education before auditing. 
