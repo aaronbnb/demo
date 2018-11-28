@@ -1,7 +1,7 @@
 # Accessible Forms
 
-**[Forms -- Live Site][forms]**
-Please take a moment to explore the form
+**[Live Site][forms]**
+Please take a moment to explore the forms
 
 [forms]: https://beaccessible.github.io/forms 
 
